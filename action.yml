@@ -1,0 +1,17 @@
+name: "Action Test"
+description: "Test of action"
+inputs:
+  token:
+    description: "The GITHUB_TOKEN secret"
+    required: true
+  workspace:
+    description: "What subfolder should the script run within"
+    required: true
+  prefix:
+    description: "The prefix to use for the labels"
+    required: false
+
+runs:
+  using: "node16"
+  pre: "pre.mjs"
+  main: "main.mjs"
